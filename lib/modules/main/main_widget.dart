@@ -1,32 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout_app/modules/main/main_store.dart';
-import 'package:my_workout_app/widgets/app_circular_progress_indicator.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-class MainWidget extends StatefulWidget {
-  final MainStore store;
-
-  const MainWidget({
-    super.key,
-    required this.store,
-  });
-
-  @override
-  State<MainWidget> createState() => _MainWidgetState();
-}
-
-class _MainWidgetState extends State<MainWidget> {
-  @override
-  void initState() {
-    widget.store.init();
-    super.initState();
-  }
+class MainWidget extends StatelessWidget {
+  const MainWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: AppCircularProgressIndicator(),
+    return MaterialApp.router(
+      title: 'My Workout App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
       ),
-    );
+      routerConfig: Modular.routerConfig,
+    ); //added by extension
   }
 }

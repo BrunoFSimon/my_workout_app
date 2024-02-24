@@ -1,5 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:my_workout_app/modules/auth/login/login_page.dart';
+import 'package:my_workout_app/modules/auth/login/login_store.dart';
 import 'package:my_workout_app/modules/main/main_module.dart';
 
 class AuthModule extends Module {
@@ -7,7 +8,9 @@ class AuthModule extends Module {
   List<Module> get imports => [MainModule()];
 
   @override
-  void binds(Injector i) {}
+  void binds(Injector i) {
+    i.add(LoginStore.new);
+  }
 
   @override
   void exportedBinds(Injector i) {}

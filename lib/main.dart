@@ -7,7 +7,7 @@ void main() {
   return runApp(
     ModularApp(
       module: MainModule(),
-      child: MainWidget(store: Modular.get()),
+      child: const MainWidget(),
     ),
   );
 }
