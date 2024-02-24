@@ -2,6 +2,19 @@ I created this project to show how I like to structure my Flutter projects
 
 Flutter 3.19.1 • channel stable
 
+-------------------
+
+Firebase's files were added to the .gitignore file, so you will need to add your own Firebase project
+I use FlutterFire to configure Firebase in the project, the configuration you find in this link: https://firebase.flutter.dev/docs/cli
+
+Commands:
+npm install -g firebase-tools
+dart pub global activate flutterfire_cli
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+flutterfire configure - then you select your Firebase project, and it will create the files for you
+
+-------------------
+
 # Terminal Commands
 # flutter packages pub run build_runner build
 
