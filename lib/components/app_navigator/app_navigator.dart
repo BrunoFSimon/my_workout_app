@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 abstract class AppNavigator {
   Future<T?> push<T>(AppNavigatorRoute route);
+  void navigate<T>(AppNavigatorRoute route);
 }
 
 class AppNavigatorImpl implements AppNavigator {
@@ -12,6 +13,14 @@ class AppNavigatorImpl implements AppNavigator {
       arguments: route.arguments,
     );
     return result;
+  }
+
+  @override
+  void navigate<T>(AppNavigatorRoute route) {
+    Modular.to.navigate(
+      route.routeName,
+      arguments: route.arguments,
+    );
   }
 }
 
