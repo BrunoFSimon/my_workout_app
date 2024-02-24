@@ -2,6 +2,9 @@ I created this project to show how I like to structure my Flutter projects
 
 Flutter 3.19.1 • channel stable
 
+# Terminal Commands
+# flutter packages pub run build_runner build
+
 -------------------
 
 Packages used:
@@ -35,5 +38,13 @@ I always use wrappers for the widgets, even to use the default widgets, because 
 -------------------
 
 Some classes can be used across the aplication, outside modules, then I use the MainModule to put these shared classes and export them to other modules
+
+-------------------
+
+-------------------
+
+-------------------
+
+-------------------
 
 -------------------

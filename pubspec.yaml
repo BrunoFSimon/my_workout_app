@@ -24,6 +24,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-# Terminal Commands
-# flutter packages pub run build_runner build
