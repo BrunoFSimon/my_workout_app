@@ -16,6 +16,8 @@ flutterfire configure - then you select your Firebase project, and it will creat
 -------------------
 
 # Terminal Commands
+
+Generate .g.dart files
 # flutter packages pub run build_runner build
 
 -------------------
